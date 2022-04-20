@@ -1,0 +1,7 @@
+PySocks
+Pyrogram
+TgCrypto
+pip
+pyaes
+setuptools
+wheel
