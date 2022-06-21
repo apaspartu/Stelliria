@@ -64,28 +64,6 @@ def handle(client, message: Message):
             [InlineKeyboardButton('Ще одне', callback_data='get_random_constellation')]
         ]))
 
-# !!! Потім доробити перегляд інформації про сузір'я
-
-#@app.on_message(filters.regex("Про сузір\'я") & is_mode('general'))
-#def handle(client, message: Message):
-#    global mode
-#    mode = 'about'
-#    app.send_message(message.chat.id, 'Про яке сузір\'я ви хочете почитати?')
-
-
-#@app.on_message(filters.text & is_mode('about'))
-#def handle(client, message: Message):
-#    global mode
-#    mode = 'general'
-#
-#    name = prettify_name(message.text)
-#    if check_name(name):
-#        app.send_message(message.chat.id, f'Сузір\'я {message.text} походить...')
-#    else:
-#        app.send_message(message.chat.id, 'Вибачте, я не можу знайти такого сузір\'я. Можливо неправильна назва')
-#        app.send_message(message.chat.id, f'Спробуйте ще {emoji.SMILING_FACE}')
-
-
 @app.on_message(filters.regex("About") & is_mode('general'))
 def handle(client, message: Message):
     app.send_message(message.chat.id, 'Подяка naturenoon.com за картинки сузір\'їв.\n\nБот створений для швидкого '
